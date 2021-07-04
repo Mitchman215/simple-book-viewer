@@ -12,11 +12,10 @@ struct BookDetail: View {
     var book:Book
     
     var body: some View {
+        
         VStack {
-            // MARK: book title
-            Text(book.title)
-                .font(.largeTitle)
-                .bold()
+            
+            
         }
     }
 }
