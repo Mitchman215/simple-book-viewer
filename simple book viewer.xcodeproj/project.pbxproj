@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		A296446A2691587F00F21872 /* simple_book_viewerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A29644692691587F00F21872 /* simple_book_viewerApp.swift */; };
-		A296446C2691587F00F21872 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A296446B2691587F00F21872 /* ContentView.swift */; };
 		A296446E2691588100F21872 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A296446D2691588100F21872 /* Assets.xcassets */; };
 		A29644712691588100F21872 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A29644702691588100F21872 /* Preview Assets.xcassets */; };
 		A296447D269158B300F21872 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = A296447C269158B300F21872 /* Book.swift */; };
@@ -22,7 +21,6 @@
 /* Begin PBXFileReference section */
 		A29644662691587F00F21872 /* simple book viewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "simple book viewer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A29644692691587F00F21872 /* simple_book_viewerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = simple_book_viewerApp.swift; sourceTree = "<group>"; };
-		A296446B2691587F00F21872 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A296446D2691588100F21872 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A29644702691588100F21872 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A29644722691588100F21872 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -103,7 +101,6 @@
 		A296447B2691589C00F21872 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				A296446B2691587F00F21872 /* ContentView.swift */,
 				A296448726915D0500F21872 /* Bookshelf.swift */,
 				A296448A26915D1300F21872 /* BookDetail.swift */,
 				A296448D26915D2500F21872 /* BookPages.swift */,
@@ -189,7 +186,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A296446C2691587F00F21872 /* ContentView.swift in Sources */,
 				A296448E26915D2500F21872 /* BookPages.swift in Sources */,
 				A296446A2691587F00F21872 /* simple_book_viewerApp.swift in Sources */,
 				A29644852691599C00F21872 /* BookModel.swift in Sources */,
