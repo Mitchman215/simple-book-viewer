@@ -21,9 +21,14 @@ struct BookDetail: View {
                 Text("Read Now!")
                     .font(.title)
                     .accentColor(.black)
-                Image("cover\(book.id)")
-                    .resizable()
-                    .scaledToFit()
+                
+                    NavigationLink(
+                        destination: BookPages(book: book),
+                        label: {
+                            Image("cover\(book.id)")
+                                .resizable()
+                                .scaledToFit()
+                        })
             }
             .padding()
             
@@ -48,17 +53,18 @@ struct BookDetail: View {
                 }
             }
             .pickerStyle(SegmentedPickerStyle())
+            .padding([.horizontal, .bottom], 60)
         }
         .onAppear(perform: {
-            rating = book.rating
-        })
-        
+            rating = book.rating})
+        .navigationBarTitle(book.title)
     }
     
 }
 
 struct BookDetail_Previews: PreviewProvider {
     static var previews: some View {
-        BookDetail(book: BookModel().books[1])
+        BookDetail(book: BookModel().books[0])
+            .environmentObject(BookModel())
     }
 }

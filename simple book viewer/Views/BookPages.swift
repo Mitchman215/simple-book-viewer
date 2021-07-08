@@ -14,19 +14,24 @@ struct BookPages: View {
     @State private var page = 0
     
     var body: some View {
-        TabView(selection: $page,
-                content:  {
-                    ForEach(book.content.indices) { index in
-                        VStack {
-                            Text(book.content[index])
-                                .tag(index)
-                            Spacer()
-                            Text("Page \(index + 1)")
-                        }
-                        .padding()
-                    }
-                })
-            .tabViewStyle(PageTabViewStyle())
+        TabView(selection: $page) {
+            ForEach(book.content.indices) { index in
+                VStack {
+                    Text(book.content[index])
+                        .tag(index)
+                    
+                    Spacer()
+                    
+                    Text("\(index + 1)")
+                }
+            }
+            .padding()
+        }
+        .tabViewStyle(PageTabViewStyle())
+        .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .never))
+        .onAppear() {
+            page = book.currentPage
+        }
         
     }
 }
@@ -34,5 +39,6 @@ struct BookPages: View {
 struct BookPages_Previews: PreviewProvider {
     static var previews: some View {
         BookPages(book: BookModel().books[0])
+            .environmentObject(BookModel())
     }
 }

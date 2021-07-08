@@ -24,8 +24,6 @@ struct Bookshelf: View {
                                         .frame(width: geo.size.width-20, height: geo.size.height - 150, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                                         .foregroundColor(.black)
                                 })
-                            
-                            
                         }
                     }
                     
