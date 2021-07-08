@@ -9,7 +9,7 @@ import SwiftUI
 
 struct Bookshelf: View {
     
-    @State var model = BookModel()
+    @EnvironmentObject var model:BookModel
     
     var body: some View {
         GeometryReader { geo in
@@ -22,6 +22,7 @@ struct Bookshelf: View {
                                 label: {
                                     BookPreview(book: bk)
                                         .frame(width: geo.size.width-20, height: geo.size.height - 150, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                                        .foregroundColor(.black)
                                 })
                             
                             
@@ -39,5 +40,6 @@ struct Bookshelf: View {
 struct Bookshelf_Previews: PreviewProvider {
     static var previews: some View {
         Bookshelf()
+            .environmentObject(BookModel())
     }
 }

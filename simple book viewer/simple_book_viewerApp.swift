@@ -12,6 +12,7 @@ struct simple_book_viewerApp: App {
     var body: some Scene {
         WindowGroup {
             Bookshelf()
+                .environmentObject(BookModel())
         }
     }
 }

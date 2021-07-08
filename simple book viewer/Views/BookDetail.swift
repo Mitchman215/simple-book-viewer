@@ -9,8 +9,8 @@ import SwiftUI
 
 struct BookDetail: View {
     
+    @EnvironmentObject var model:BookModel
     var book:Book
-    
     @State private var rating = 2
     
     var body: some View {
