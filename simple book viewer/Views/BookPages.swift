@@ -10,7 +10,7 @@ import SwiftUI
 struct BookPages: View {
     
     var book:Book
-    @EnvironmentObject var model:BookModel
+    @EnvironmentObject var model: BookModel
     @State private var page = 0
     
     var body: some View {

@@ -30,7 +30,7 @@ struct Bookshelf: View {
                     }
                     
                 }
-                .navigationBarTitle("My Library")
+                .navigationTitle("My Library")
             }
         }
     }

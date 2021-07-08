@@ -44,6 +44,14 @@ class BookModel: ObservableObject {
         
     }
     
+    func toggleFavorite(bookID:Int) {
+        if let index = books.firstIndex(where: { $0.id == bookID }) {
+            books[index].isFavorite.toggle()
+            let temp = books[index]
+            books.remove(at: index)
+            books.insert(temp, at: index)
+        }
+    }
     
     
 }

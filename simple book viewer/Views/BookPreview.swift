@@ -28,7 +28,7 @@ struct BookPreview: View {
                     
                     Spacer()
                     
-                    if book.isFavourite {
+                    if book.isFavorite {
                         Image(systemName: "star.fill")
                             .resizable()
                             .foregroundColor(.yellow)

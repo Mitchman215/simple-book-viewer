@@ -9,7 +9,7 @@ import SwiftUI
 
 struct BookDetail: View {
     
-    @EnvironmentObject var model:BookModel
+    @EnvironmentObject var model: BookModel
     var book:Book
     @State private var rating = 2
     
@@ -25,10 +25,22 @@ struct BookDetail: View {
                     .resizable()
                     .scaledToFit()
             }
+            .padding()
             
             Text("Mark for later")
                 .font(.headline)
+            Button(action: {
+                model.toggleFavorite(bookID: book.id)
+            }, label: {
+                Image(systemName: book.isFavorite ?
+                    "star.fill" : "star")
+                    .resizable()
+                    .frame(width: 28, height: 28)
+                    .foregroundColor(.yellow)
+                    
+            })
             
+            Text("Rate \(book.title)")
             Picker("Select rating", selection: $rating) {
                 ForEach(1..<6) { i in
                     Text(String(i))

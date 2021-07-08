@@ -2,7 +2,7 @@
     {
         "title": "Amazing Words",
         "author": "Sir Prise Party",
-        "isFavourite": true,
+        "isFavorite": true,
         "currentPage": 0,
         "rating": 2,
         "id": 1,
@@ -37,7 +37,7 @@
     {
         "title": "Literature For Reading",
         "author": "Sir Lee Oldman",
-        "isFavourite": false,
+        "isFavorite": false,
         "currentPage": 0,
         "rating": 2,
         "id": 2,
@@ -72,7 +72,7 @@
     {
         "title": "Text and More",
         "author": "Sir Vey Sample",
-        "isFavourite": false,
+        "isFavorite": false,
         "currentPage": 0,
         "rating": 2,
         "id": 3,
@@ -107,7 +107,7 @@
     {
         "title": "Characters, Words, and Paragraphs",
         "author": "Sir Cull K",
-        "isFavourite": false,
+        "isFavorite": false,
         "rating": 2,
         "currentPage": 0,
         "id": 4,
@@ -142,7 +142,7 @@
     {
         "title": "A Book, I Think",
         "author": "Sir Vivor Island",
-        "isFavourite": false,
+        "isFavorite": false,
         "currentPage": 0,
         "rating": 2,
         "id": 5,
