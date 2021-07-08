@@ -8,13 +8,30 @@
 import SwiftUI
 
 struct BookPages: View {
+    
+    var book:Book
+    @State private var page = 0
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        TabView(selection: $page,
+                content:  {
+                    ForEach(book.content.indices) { index in
+                        VStack {
+                            Text(book.content[index])
+                                .tag(index)
+                            Spacer()
+                            Text("Page \(index + 1)")
+                        }
+                        .padding()
+                    }
+                })
+            .tabViewStyle(PageTabViewStyle())
+        
     }
 }
 
 struct BookPages_Previews: PreviewProvider {
     static var previews: some View {
-        BookPages()
+        BookPages(book: BookModel().books[0])
     }
 }
