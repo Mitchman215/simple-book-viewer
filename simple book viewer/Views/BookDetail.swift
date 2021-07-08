@@ -54,6 +54,9 @@ struct BookDetail: View {
             }
             .pickerStyle(SegmentedPickerStyle())
             .padding([.horizontal, .bottom], 60)
+            .onChange(of: rating, perform: { rt in
+                model.updateRating(bookID: book.id, newRating: rt)
+            })
         }
         .onAppear(perform: {
             rating = book.rating})

@@ -59,5 +59,10 @@ class BookModel: ObservableObject {
         }
     }
     
+    func updateRating(bookID:Int, newRating:Int) {
+        if let index = books.firstIndex(where: { $0.id == bookID }) {
+            books[index].rating = newRating
+        }
+    }
     
 }
