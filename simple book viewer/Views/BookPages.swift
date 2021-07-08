@@ -29,6 +29,9 @@ struct BookPages: View {
         }
         .tabViewStyle(PageTabViewStyle())
         .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .never))
+        .onChange(of: page, perform: { pg in
+            model.changePage(bookID: book.id, newPage: pg)
+        })
         .onAppear() {
             page = book.currentPage
         }

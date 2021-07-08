@@ -53,5 +53,11 @@ class BookModel: ObservableObject {
         }
     }
     
+    func changePage(bookID:Int, newPage:Int) {
+        if let index = books.firstIndex(where: { $0.id == bookID }) {
+            books[index].currentPage = newPage
+        }
+    }
+    
     
 }
