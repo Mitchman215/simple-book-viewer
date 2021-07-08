@@ -12,12 +12,25 @@ struct Bookshelf: View {
     @State var model = BookModel()
     
     var body: some View {
-        ScrollView {
-            ForEach(1..<6) { i in
-                BookPreview(book: model.books[i], coverImageID: i)
-                
+        GeometryReader { geo in
+            NavigationView {
+                ScrollView {
+                    LazyVStack {
+                        ForEach(model.books) { bk in
+                            NavigationLink(
+                                destination: BookDetail(book: bk),
+                                label: {
+                                    BookPreview(book: bk)
+                                        .frame(width: geo.size.width-20, height: geo.size.height - 150, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                                })
+                            
+                            
+                        }
+                    }
+                    
+                }
+                .navigationBarTitle("My Library")
             }
-            
         }
     }
     

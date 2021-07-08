@@ -10,7 +10,6 @@ import SwiftUI
 struct BookPreview: View {
     
     var book:Book
-    var coverImageID:Int
     
     var body: some View {
         
@@ -18,18 +17,33 @@ struct BookPreview: View {
             // creates background shadow
             Rectangle()
                 .foregroundColor(.white)
+                .cornerRadius(15)
                 .shadow(color: /*@START_MENU_TOKEN@*/.black/*@END_MENU_TOKEN@*/, radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/, x: -5, y: 5)
             
             VStack (alignment: .leading) {
-                Text(book.title)
-                    .font(.largeTitle)
-                    .bold()
+                HStack {
+                    Text(book.title)
+                        .font(.largeTitle)
+                        .bold()
+                    
+                    Spacer()
+                    
+                    if book.isFavourite {
+                        Image(systemName: "star.fill")
+                            .resizable()
+                            .foregroundColor(.yellow)
+                            .scaledToFill()
+                            .frame(width: 40, height: 40, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                            
+                    }
+                    
+                }
                 
                 
                 Text(book.author)
                     .italic()
                 
-                Image("cover" + String(coverImageID))
+                Image("cover" + String(book.id))
                     .resizable()
                     .scaledToFit()
                 
@@ -41,6 +55,6 @@ struct BookPreview: View {
 
 struct BookPreview_Previews: PreviewProvider {
     static var previews: some View {
-        BookPreview(book: BookModel().books[0],  coverImageID: 1)
+        BookPreview(book: BookModel().books[0])
     }
 }

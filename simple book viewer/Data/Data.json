@@ -2,7 +2,7 @@
     {
         "title": "Amazing Words",
         "author": "Sir Prise Party",
-        "isFavourite": false,
+        "isFavourite": true,
         "currentPage": 0,
         "rating": 2,
         "id": 1,
